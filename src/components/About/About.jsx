@@ -9,7 +9,7 @@ const About = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="about">
+    <div className="about" id="About">
       <div className="container">
       <Swing>
         <h2 className="special-heading"style={{ color: darkMode ? "white" : "" }}>About</h2>

@@ -97,7 +97,7 @@ header nav .logo a
     font-weight: 500;
     padding-left: 0;
     display: flex;
-    color: var(--main-color);
+    color: var(--orange);
 }
 header :where(nav, .left, .right, ul, .icons)
 {
@@ -128,7 +128,7 @@ header nav a:hover
 .icons a
 {
     position: relative;
-    font-size: 1.375em;
+    font-size: 12px;
     width: 40px;
     height: 40px;
     padding: 0;
@@ -264,7 +264,7 @@ header nav .menu ul li a:hover
 
 
 
-@media (min-width:768px)
+@media (min-width:1132px)
 {
     .mobile-only
     {

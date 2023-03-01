@@ -27,13 +27,13 @@ function App() {
       <Intro />
       <About/>
       <Experience />
-      {/* <Portfolio /> */}
+      <Portfolio />
       <Projects/>
      
       <Testimonial />
+      <Services /> 
       <Contact />
       <Footer />
-      {/* <Services />  */}
       {/* */}
       {/*
        */}

@@ -6,6 +6,7 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
+import Swing from 'react-reveal/Swing';
 
 const Services = () => {
   // context
@@ -19,90 +20,35 @@ const Services = () => {
   };
 
   return (
-    <div className="services" id="services">
-      {/* left side */}
-      <div className="awesome">
-        {/* dark mode */}
-        <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
-        <span>services</span>
-        {/* <spane>
-          Lorem ispum is simpley dummy text of printing of printing Lorem
-          <br />
-          ispum is simpley dummy text of printing
-        </spane> */}
-        {/* <a href={Resume} download>
-          <button className="button s-button">Download CV</button>
-        </a> */}
-        <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
+    <div class="services" id="services">
+          <Swing>
+          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Projects</h2>
+          </Swing>    <div class="container">
+
+      <div class="box">
+        <i class="fas fa-user-shield fa-4x"></i>
+        <h3>Security</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
       </div>
-      {/* right */}
-      <div className="cards">
-        {/* first card */}
-        <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={HeartEmoji}
-            heading={"Web Design"}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
-          />
-        </motion.div>
-        <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
-        >
-          <Card
-          emoji={HeartEmoji}
-          heading={"Web Design"}
-          />
-          </motion.div>
-          <motion.div 
-          initial={{left:"30rem"}}
-          whileInView={{left:"30rem"}}
-          transition={transition}
-          >
-          <Card
-            emoji={HeartEmoji}
-            heading={"Web Design "}
-            detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
-          />
-        </motion.div>
-        {/* second card */}
-        <motion.div
-          initial={{ left: "-11rem", top: "12rem" }}
-          whileInView={{ left: "-4rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={Glasses}
-            heading={"Web Development"}
-            detail={"Html, Css, JavaScript, React, Nodejs, Express"}
-          />
-        </motion.div>
-        {/* 3rd */}
-        <motion.div
-          initial={{ top: "19rem", left: "20rem" }}
-          whileInView={{ left: "12rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={Humble}
-            heading={"UI/UX"}
-            detail={
-"Process of enhancing user satisfaction with a product by improving the usability, accessibility, and pleasure provided in the interaction."            }
-            color="rgba(252, 166, 31, 0.45)"
-          />
-        </motion.div>
-      
-        <div
-          className="blur s-blur2"
-          style={{ background: "var(--purple)" }}
-        ></div>
+      <div class="box">
+        <i class="fas fa-laptop-code fa-4x"></i>
+        <h3>Coding</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
+      </div>
+
+      <div class="box">
+        <i class="fas fa-bullhorn fa-4x"></i>
+        <h3>Marketing</h3>
+        <div class="info">
+          <a href="#">Details</a>
+        </div>
       </div>
     </div>
+  </div>
   );
 };
 

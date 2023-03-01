@@ -17,7 +17,7 @@ const Projects = () => {
   return (
     <div className="Projects" id="Projects">
           <Swing>
-          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Portfolio</h2>
+          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Projects</h2>
           </Swing>
 
     <div className="container">

@@ -97,3 +97,13 @@
         font-size: 12px;
     }
 }
+
+.swiper-pagination-bullet
+{
+    background-color: #a78621 !important;
+}
+ .swiper-pagination-bullet-active
+{
+    background-color: var(--orange) !important;
+    border: 6px solid var(--orange);
+}

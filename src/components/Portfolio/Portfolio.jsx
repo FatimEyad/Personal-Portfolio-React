@@ -1,43 +1,44 @@
-import React, { useContext } from "react";
+import React,{ useContext } from "react";
 import "./Portfolio.css";
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css";
+import { themeContext } from "../../Context";
+import Slide from 'react-reveal/Slide';
+import Swing from 'react-reveal/Swing';
 import Sidebar from "../../img/sidebar.png";
 import Ecommerce from "../../img/ecommerce.png";
 import HOC from "../../img/hoc.png";
 import MusicApp from "../../img/musicapp.png";
-import { themeContext } from "../../Context";
-const Portfolio = () => {
+const Portflio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
   return (
-    <div className="portfolio" id="portfolio">
-      {/* heading */}
-      <span style={{color: darkMode?'white': ''}}>Recent Projects</span>
-      <span>Portfolio</span>
-
-      {/* slider */}
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={3}
-        grabCursor={true}
-        className="portfolio-slider"
-      >
-        <SwiperSlide>
+    <div className="Portfolio" id="Portfolio">
+          <Swing>
+          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Portfolio</h2>
+          </Swing>
+    <div class="container">
+      <div class="box">
+        <div class="image">
           <img src={Sidebar} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
           <img src={Ecommerce} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={MusicApp} alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
           <img src={HOC} alt="" />
-        </SwiperSlide>
-      </Swiper>
+        </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src={MusicApp} alt="" />
+        </div>
+      </div>
     </div>
+  </div>
   );
 };
 
-export default Portfolio;
+export default Portflio;
