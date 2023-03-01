@@ -5,12 +5,11 @@
     margin-top: 4rem;
       /* scroll */
   padding-top: 3rem;
+  position: relative;
 }
 
 .c-right{
-    display: flex;
-    justify-content: center;
-    position: relative;
+ 
     flex: 1;
 }
 
@@ -23,7 +22,9 @@
     
 }
 
-.c-right .user{
+.c-right .user,
+.c-right .email,
+.c-right .message{
     width: 20rem;
     height: 2rem;
     padding: 0.3em;
@@ -32,7 +33,48 @@
     border-radius: 8px;
     font-size: 16px;   
 }
+.c-right .first {
+    color: saddlebrown;
+    position: absolute;
+    left: 34%;
+    top: 10%;
+    transition: .3s;
+}
+.c-right .second {
+    color: saddlebrown;
+    position: absolute;
+    left: 34%;
+    top: 21%;
+    transition: .3s;
+}
+.c-right .third {
+    color: saddlebrown;
+    position: absolute;
+    left: 34%;
+    top: 35%;
+    transition: .3s;
+}
 
+.c-right .user:focus + label
+{
+    top: 29px;
+    font-size: 12px;
+    color: var(--orange);
+}
+.c-right .email:focus + label
+{
+    top: 18%;
+    font-size: 12px;
+    color: var(--orange);
+}
+
+
+.c-right textarea:focus + label
+{
+    top: 29%;
+    font-size: 12px;
+    color: var(--orange);
+}
 textarea{
     height: 4rem!important;
 }
@@ -40,6 +82,10 @@ textarea{
 .c-blur1{
     top: 1rem;
     left: 8rem;
+}
+.w-left
+{
+    margin-left: auto;
 }
 
 @media screen and (max-width: 480px) {
@@ -54,3 +100,17 @@ textarea{
     }
 
 }   
+@media (max-width:768px)
+{
+    .contact-form {
+        flex-wrap: wrap;
+    }
+        .awesome > :nth-child(1) {
+            font-size: 19px;
+            text-align: center;
+        }
+        .awesome > :nth-child(2) {
+            font-size: 19px;
+            text-align: center;
+        }
+}

@@ -2,51 +2,45 @@ import React from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
-  return (
-    <div className="n-wrapper" id="Navbar">
-      {/* left */}
-      <div className="n-left">
-        <div className="n-name">Andrew</div>
-        <Toggle />
-      </div>
-      {/* right */}
-      <div className="n-right">
-        <div className="n-list">
-          <ul style={{ listStyleType: "none" }}>
-            <li>
-              <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="services" spy={true} smooth={true}>
-                Serivces
-              </Link>
-            </li>
-            <li>
-              <Link to="works" spy={true} smooth={true}>
-                Experience
-              </Link>
-            </li>
-            <li>
-              <Link to="portfolio" spy={true} smooth={true}>
-                Protfolio
-              </Link>
-            </li>
-            <li>
-              <Link to="testimonial" spy={true} smooth={true}>
-                Testimonial
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <Link to="contact" spy={true} smooth={true}>
-        <button className="button n-button">Contact</button>
-        </Link>
-      </div>
-    </div>
-  );
-};
+import {useState } from "react";
+import Logo from "./Logo";
+import Links from "./Links";
+import Navicons from "./Navicons";
+import useClickOutside from'./useClickOutside'
 
-export default navbar;
+
+const Navbar = () => {
+    const [clicked, setclicked]= useState(true)
+
+    const [trigger, settrigger]= useState(false)
+
+    const handelclick =()=>{
+        setclicked(!clicked)
+    }
+    const handeltrigger =()=>{
+        settrigger(!trigger)
+    }
+
+    let domnode= useClickOutside(()=>
+    {
+        settrigger(false)
+    })
+ 
+return ( 
+    <div id="page" className={clicked ?"site":"site showsearch"}>
+        <header>
+            <div className="container">
+                <nav  ref={domnode}>
+                    <div className="left"  >
+                        <Logo/>
+                        <Links trigger={trigger}/>
+                    </div>
+                    <Navicons clicked={clicked} handelclick={handelclick} handeltrigger={handeltrigger}/>
+                </nav>
+            </div>
+            {/* <Formsearch/>       */}
+        </header>
+    </div>
+);
+}
+export default Navbar;

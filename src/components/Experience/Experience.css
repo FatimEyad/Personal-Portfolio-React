@@ -4,7 +4,7 @@
   justify-content: center;
   gap: 5rem;
   height: 30vh;
-  margin-bottom: 8rem;
+  margin-bottom: 48px;
   /* darkmode */
   color: var(--black);
 }
@@ -49,3 +49,10 @@
         transform: scale(0.7);
     }
 }
+/* @media (min-width:768px)
+{
+.experience {
+
+    margin-bottom: 0;
+}
+} */

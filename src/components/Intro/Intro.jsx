@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
+import boy from "../../img/prot.png";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
@@ -13,6 +13,10 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Resume from "./resume.pdf";
+import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -25,18 +29,18 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       {/* left name side */}
       <div className="i-left">
+         <Fade left>
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
-          <span>Andrew Thomas</span>
-          <span>
-            Frontend Developer with high level of experience in web designing
-            and development, producting the Quality work
+          <span>innovative website designer </span>
+          <span style={{ color: darkMode ? "white" : "" }}>
+            Innovative website designer and developer specializing in responsive, user-friendly design
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
-          <button className="button i-button">Hire me</button>
-        </Link>
+        <a href={Resume} download>
+          <button className="button v-button">Download CV</button>
+        </a>
+        </Fade>
         {/* social icons */}
         <div className="i-icons">
           <img src={Github} alt="" />
@@ -45,21 +49,21 @@ const Intro = () => {
         </div>
       </div>
       {/* right image side */}
+      <Fade right>
       <div className="i-right">
-        <img src={Vector1} alt="" />
-        <img src={Vector2} alt="" />
+         
         <img src={boy} alt="" />
         {/* animation */}
         <motion.img
           initial={{ left: "-36%" }}
-          whileInView={{ left: "-24%" }}
+          whileInView={{ left: "-2%" }}
           transition={transition}
           src={glassesimoji}
           alt=""
         />
 
         <motion.div
-          initial={{ top: "-4%", left: "74%" }}
+          initial={{ top: "26%", left: "60%" }}
           whileInView={{ left: "68%" }}
           transition={transition}
           className="floating-div"
@@ -90,6 +94,7 @@ const Intro = () => {
           }}
         ></div>
       </div>
+      </Fade>
     </div>
   );
 };

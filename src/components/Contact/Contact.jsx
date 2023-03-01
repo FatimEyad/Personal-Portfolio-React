@@ -2,6 +2,8 @@ import React, { useContext, useRef, useState } from "react";
 import "./Contact.css";
 import emailjs from "@emailjs/browser";
 import { themeContext } from "../../Context";
+import Fade from 'react-reveal/Fade';
+
 const Contact = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -32,11 +34,13 @@ const Contact = () => {
   return (
     <div className="contact-form" id="contact">
       {/* left side copy and paste from work section */}
-      <div className="w-left">
+      <div className="left">
         <div className="awesome">
           {/* darkMode */}
+          <Fade left>
           <span style={{color: darkMode?'white': ''}}>Get in Touch</span>
           <span>Contact me</span>
+          </Fade>
           <div
             className="blur s-blur1"
             style={{ background: "#ABF1FF94" }}
@@ -45,6 +49,8 @@ const Contact = () => {
       </div>
       {/* right side form */}
       <div className="c-right">
+      <Fade right>
+
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="user_name" className="user"  placeholder="Name"/>
           <input type="email" name="user_email" className="user" placeholder="Email"/>
@@ -56,6 +62,8 @@ const Contact = () => {
             style={{ background: "var(--purple)" }}
           ></div>
         </form>
+        </Fade>
+
       </div>
     </div>
   );

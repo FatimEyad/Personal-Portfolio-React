@@ -77,3 +77,23 @@
         height: 70px;
     }
   }
+
+@media (max-width:768px)
+{
+    .t-heading>* {
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .t-heading > :nth-child(1) {
+        font-size: 19px;
+        text-align: center;
+    }
+    .t-heading > :nth-child(2) {
+        font-size: 19px;
+        text-align: center;
+    }
+    .view
+    {
+        font-size: 12px;
+    }
+}

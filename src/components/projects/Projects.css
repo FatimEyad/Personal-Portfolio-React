@@ -1,0 +1,138 @@
+
+/* Start Features */
+.Projects {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+  }
+  .Projects .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+  }
+  .Projects .box {
+    text-align: center;
+    border: 1px solid #ccc;
+    /* width: max-content; */
+    max-width: 500px;
+    background-color: white;
+
+}
+  .Projects .box .img-holder {
+    position: relative;
+    overflow: hidden;
+  }
+  .Projects .box .img-holder::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 100%;
+    height: 100%;
+  }
+  .Projects .box .img-holder::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    transition: var(--main-transition);
+  }
+  .Projects .box .img-holder img {
+    max-width: 100%;
+  }
+  .Projects .box:hover .img-holder::after {
+    border-width: 170px 500px 170px 0;
+  }
+  .Projects .box h2 {
+    position: relative;
+    font-size: 40px;
+    margin: auto;
+    width: fit-content;
+  }
+  .Projects .box h2::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 15px;
+    height: 5px;
+    width: calc(100% - 30px);
+  }
+  .Projects .box p {
+    line-height: 2;
+    font-size: 12px;
+    margin: 30px 0;
+    padding: 25px;
+    color: #777;
+    font-weight:bold;
+  }
+  .Projects .box a {
+    display: block;
+    border: 3px solid transparent;
+    width: fit-content;
+    margin: 0 auto 30px;
+    font-weight: bold;
+    font-size: 22px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    transition: var(--main-transition);
+  }
+  .Projects .project1 .img-holder::before {
+    background-color: rgb(142 202 230 / 60%);
+  }
+  .Projects .project1 h2::after {
+    background-color: #8ecae6;
+  }
+  .Projects .project1 a {
+    color: #8ecae6;
+    border-color: #8ecae6;
+    background: linear-gradient(to right, #8ecae6 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .Projects .project2 .img-holder::before {
+    background-color: rgb(33 158 188 / 60%);
+  }
+  .Projects .project2 h2::after {
+    background-color: #219ebc;
+  }
+  .Projects .project2 a {
+    color: #219ebc;
+    border-color: #219ebc;
+    background: linear-gradient(to right, #219ebc 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .Projects .project3 .img-holder::before {
+    background-color: rgb(251 133 0 / 60%);
+  }
+  .Projects .project3 h2::after {
+    background-color: #fb8500;
+  }
+  .Projects .project3 a {
+    color: #fb8500;
+    border-color: #fb8500;
+    background: linear-gradient(to right, #fb8500 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .Projects .project4 .img-holder::before {
+    background-color: rgba(223, 183, 3, 0.6);
+  }
+  .Projects .project4 h2::after {
+    background-color: #ffb703;
+  }
+  .Projects .project4 a {
+    color: #ffb703;
+    border-color: #ffb703;
+    background: linear-gradient(to right, #ffb703 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  .Projects .box:hover a {
+    background-position: left bottom;
+    color: white;
+  }
+  /* End Projects */
