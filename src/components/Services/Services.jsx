@@ -22,7 +22,7 @@ const Services = () => {
   return (
     <div class="services" id="services">
           <Swing>
-          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Projects</h2>
+          <h2 className="special-heading" style={{ color: darkMode ? "white" : "" }}>Services</h2>
           </Swing>    <div class="container">
 
       <div class="box">
