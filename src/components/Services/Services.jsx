@@ -26,15 +26,15 @@ const Services = () => {
           </Swing>    <div class="container">
 
       <div class="box">
-        <i class="fas fa-user-shield fa-4x"></i>
-        <h3>Security</h3>
+      <i class="fas fa-laptop-code fa-4x"></i>
+        <h3>Coding</h3>
         <div class="info">
           <a href="#">Details</a>
         </div>
       </div>
       <div class="box">
-        <i class="fas fa-laptop-code fa-4x"></i>
-        <h3>Coding</h3>
+      <i class="fa-solid fa-pen-nib  fa-4x"></i>
+        <h3>Graphic Design</h3>
         <div class="info">
           <a href="#">Details</a>
         </div>

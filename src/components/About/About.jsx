@@ -19,7 +19,7 @@ const About = () => {
         <Slide left>
         <div className="text">
             <p style={{ color: darkMode ? "white" : "" }}>
-            I have had the chance to work with a variety of clients throughout the course of my five years in the field, from small startups to big organizations. I'm continuously pushing the limits of what is possible because of my enthusiasm for designing powerful and captivating digital experiences.
+      I'm continuously pushing the limits of what is possible because of my enthusiasm for designing powerful and captivating digital experiences.
 I specialize in building unique websites and applications that are catered to the unique demands of each customer utilizing JavaScript, React, CSS, and HTML. Whether it's a straightforward one-page website or a sophisticated web application, I work to design easy and approachable user interfaces that make using them a pleasure for the user.
 In addition to my technical abilities, I have a creative problem-solving style and am constantly searching for fresh approaches to design challenges. 
             </p>

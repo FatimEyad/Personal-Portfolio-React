@@ -4,9 +4,9 @@ import { themeContext } from "../../Context";
 import Slide from 'react-reveal/Slide';
 import Swing from 'react-reveal/Swing';
 import Sidebar from "../../img/sidebar.png";
-import Ecommerce from "../../img/ecommerce.png";
-import HOC from "../../img/hoc.png";
-import MusicApp from "../../img/musicapp.png";
+import Ecommerce from "../../img/ECOMMERCREACT.png";
+import PORTFOLIO from "../../img/PORTFOLIO.png";
+import mui from "../../img/mui.png";
 const Portflio = () => {
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
@@ -28,12 +28,12 @@ const Portflio = () => {
       </div>
       <div class="box">
         <div class="image">
-          <img src={HOC} alt="" />
+          <img src={PORTFOLIO} alt="" />
         </div>
       </div>
       <div class="box">
         <div class="image">
-          <img src={MusicApp} alt="" />
+          <img src={mui} alt="" />
         </div>
       </div>
     </div>
