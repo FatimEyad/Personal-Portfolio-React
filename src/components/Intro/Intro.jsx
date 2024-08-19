@@ -13,7 +13,6 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import fatima from "./cv-fatima.pdf";
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 
@@ -37,7 +36,7 @@ const Intro = () => {
             Innovative website designer and developer specializing in responsive, user-friendly design
           </span>
         </div>
-        <a href={fatima} download>
+        <a >
           <button className="button v-button">Download CV</button>
         </a>
         </Fade>
